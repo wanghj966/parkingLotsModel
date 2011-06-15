@@ -8,19 +8,10 @@ package edu.buaa.parkmanage;
  * To change this template use File | Settings | File Templates.
  */
 public class Car {
-    private String bandName;
     private String carNumber;
     public Car(){}
-    public Car(String bandName,String carNumber){
-        this.bandName=bandName;
+    public Car(String carNumber){
         this.carNumber=carNumber;
-    }
-    public String getBandName() {
-        return bandName;
-    }
-
-    public void setBandName(String bandName) {
-        this.bandName = bandName;
     }
 
     public String getCarNumber() {
