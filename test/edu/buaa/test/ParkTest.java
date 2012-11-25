@@ -1,7 +1,8 @@
 package edu.buaa.test;
 
 import edu.buaa.park.Car;
-import edu.buaa.park.Park;
+import edu.buaa.park.ParkFullException;
+import edu.buaa.park.ParkPlace;
 import edu.buaa.park.Ticket;
 import junit.framework.Assert;
 import org.junit.Before;
@@ -15,29 +16,31 @@ import org.junit.Test;
  * To change this template use File | Settings | File Templates.
  */
 public class ParkTest {
-    private Park park;
+    private ParkPlace park;
 
     @Before
     public void init(){
-          park=new Park(50);
+          park=new ParkPlace(50);
     }
     /*
     一个停车场,有空车位
     停车
     成功,空车位-1
     * */
-    @Test
+
+     @Test
     public void should_carplaceNum_Minus_1_if_have_empty_Carplace_when_park(){
              park.parkCar(new Car());
-             Assert.assertEquals(49,park.getCapacity());
+             Assert.assertEquals(49,park.getAvailableNum());
     }
     /**
      * 一个停车场,没有空车位
      停车
      fail
      */
-    @Test(expected = edu.buaa.park.CarFullException.class)
+    @Test(expected =ParkFullException.class)
     public void should_throw_ParkFullException_if_park_full_when_park(){
+        for(int i=0;i<=50;i++)
         park.parkCar(new Car());
     }
 
@@ -64,7 +67,7 @@ public class ParkTest {
         Ticket ticket =park.parkCar(new Car());
 
          Car c=park.fecthCar(ticket);
-         Assert.assertEquals(park.getCapacity(), 48);
+         Assert.assertEquals(park.getAvailableNum(), 48);
     }
 
     /*有效的停车凭证
