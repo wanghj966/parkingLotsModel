@@ -1,17 +1,19 @@
 package edu.buaa.park;
 
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class ParkingBoy {
-    private List<ParkPlace> parkPlaces;
-    public ParkingBoy(List<ParkPlace> parkPlaces) {
+    private Collection<ParkPlace> parkPlaces;
+    public ParkingBoy(Collection<ParkPlace> parkPlaces) {
         this.parkPlaces=parkPlaces;
     }
-
     public Ticket park(Car car) {
+      return getAvailablePark().parkCar(car);
+    }
+    public ParkPlace getAvailablePark(){
         for(ParkPlace parkPlace:parkPlaces){
-            if(parkPlace.getAvailableNum()>0) return parkPlace.parkCar(car);
+            if(parkPlace.getAvailableNum()>0) return parkPlace;
         }
         throw new ParkFullException("所有的停车场都已满");
     }
