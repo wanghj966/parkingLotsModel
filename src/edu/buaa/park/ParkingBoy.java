@@ -4,8 +4,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class ParkingBoy {
-    private Collection<ParkPlace> parkPlaces;
-    public ParkingBoy(Collection<ParkPlace> parkPlaces) {
+    private List<ParkPlace> parkPlaces;
+    public ParkingBoy(List<ParkPlace> parkPlaces) {
         this.parkPlaces=parkPlaces;
     }
     public Ticket park(Car car) {

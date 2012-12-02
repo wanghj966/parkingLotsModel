@@ -70,15 +70,16 @@ public class ParkingBoyTest_WhenHavingSeveralParkplace {
         parkingBoy.park(new Car());
     }
 
-    /*
-    *    都空，停车停在空车位多的那个停车场
+    /*smartingboy测试
+    *    停车停在空车位多的那个停车场
     * */
     @Test
     public  void should_park_in_the_more_empty_parkplace(){
         parkingBoy.park(new Car());
         Assert.assertEquals(19, parkPlaces.get(1).getAvailableNum());
     }
-    /*两个车库空间相同时停在第一个
+    /*smartingboy测试
+    两个车库空间相同时停在第一个
     * */
     @Test
     public void  should_park_in_the_first_parkplace_if_park_availableSize_same(){

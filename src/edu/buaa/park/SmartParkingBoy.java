@@ -17,13 +17,13 @@ public class SmartParkingBoy extends ParkingBoy{
         this.parkPlaces=parkPlaces;
     }
     public ParkPlace getAvailablePark(){
-        int maxsizeIndex=0;
-        for(int i=1;i<parkPlaces.size();i++){
-            if(parkPlaces.get(i).getAvailableNum()>parkPlaces.get(maxsizeIndex).getAvailableNum())
-                maxsizeIndex=i;
+        ParkPlace availableParkPlace=(ParkPlace)parkPlaces.toArray()[0];
+        for(ParkPlace parkPlace:parkPlaces){
+            if(parkPlace.getAvailableNum()>availableParkPlace.getAvailableNum())
+                availableParkPlace=parkPlace;
         }
-        if(parkPlaces.get(maxsizeIndex).getAvailableNum()==0)throw new ParkFullException("所有的停车场都已满");
-        return   parkPlaces.get(maxsizeIndex);
+        if(availableParkPlace.getAvailableNum()==0)throw new ParkFullException("所有的停车场都已满");
+        return   availableParkPlace;
     }
 
 }

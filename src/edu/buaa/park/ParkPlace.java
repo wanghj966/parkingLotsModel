@@ -2,28 +2,31 @@ package edu.buaa.park;
 import java.util.*;
 
 public class ParkPlace {
-    private int capacity;
+    private int availableNum;
+    private final int capacity;
     private Map<Ticket,Car> placeCarMaps=new HashMap<Ticket,Car>() ;
     public ParkPlace(int capacity) {
         this.capacity=capacity;
+        this.availableNum=capacity;
     }
     public Ticket  parkCar(Car car){
         if(capacity<=0) throw new ParkFullException("车库满了");
         Ticket ticket=new Ticket();
         placeCarMaps.put(ticket,car);
-        capacity--;
+        availableNum--;
         return ticket;
     }
     public int getAvailableNum() {
-        return capacity;
+        return availableNum;
+    }
+    public double getAvailableRate(){
+        return (double)availableNum/(double)capacity;
     }
     public Car fecthCar(Ticket ticket) {
-
         Car car=placeCarMaps.get(ticket);
         if(car!=null){
         placeCarMaps.remove(ticket);
-        capacity++;}
+        availableNum++;}
         return car;
-
     }
 }

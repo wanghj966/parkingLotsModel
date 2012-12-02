@@ -11,12 +11,12 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class GeneralParkingBoy {
-    private Collection<ParkPlace> parkPlaces;
-    private ParkStrategy parkStrategy;
-    public GeneralParkingBoy(Collection<ParkPlace> parkPlaces) {
+    private List<ParkPlace> parkPlaces;
+    private ParkingLotChooser parkStrategy;
+    public GeneralParkingBoy(List<ParkPlace> parkPlaces) {
         this.parkPlaces=parkPlaces;
     }
-    public GeneralParkingBoy(Collection<ParkPlace> parkPlaces,ParkStrategy parkStrategy) {
+    public GeneralParkingBoy(List<ParkPlace> parkPlaces,ParkingLotChooser parkStrategy) {
         this.parkPlaces=parkPlaces;
         this.parkStrategy=parkStrategy;
     }
@@ -37,12 +37,5 @@ public class GeneralParkingBoy {
             if(fetchedCar!=null){return fetchedCar;}
         }
         throw new NoCarException("没有此车");
-    }
-    public ParkStrategy getParkStrategy() {
-        return parkStrategy;
-    }
-
-    public void setParkStrategy(ParkStrategy parkStrategy) {
-        this.parkStrategy = parkStrategy;
     }
 }

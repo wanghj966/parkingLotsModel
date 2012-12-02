@@ -1,6 +1,5 @@
 package edu.buaa.park;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -10,6 +9,6 @@ import java.util.List;
  * Time: 下午12:44
  * To change this template use File | Settings | File Templates.
  */
-public interface ParkStrategy {
+public interface ParkingLotChooser {
     ParkPlace getAvailablePark(List<ParkPlace> parks);
 }
