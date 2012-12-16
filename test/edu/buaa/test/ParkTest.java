@@ -8,19 +8,20 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Created with IntelliJ IDEA.
- * User: software
- * Date: 11-6-22
- * Time: 下午3:45
- * To change this template use File | Settings | File Templates.
- */
+
 public class ParkTest {
     private ParkPlace park;
 
     @Before
     public void init(){
           park=new ParkPlace(50);
+    }
+    /*
+    * 显示停车位数
+    * */
+    @Test
+    public void should_get_the_CorrectAvailableNum(){
+        Assert.assertEquals(50,park.getAvailableNum());
     }
     /*
     一个停车场,有空车位
@@ -66,7 +67,7 @@ public class ParkTest {
         park.parkCar(new Car());
         Ticket ticket =park.parkCar(new Car());
 
-         Car c=park.fecthCar(ticket);
+        park.fecthCar(ticket);
          Assert.assertEquals(park.getAvailableNum(), 48);
     }
 
@@ -74,7 +75,8 @@ public class ParkTest {
     停车
     取到原来的车
     */
-    public void should_fetch_the_correct_car_if_ticket_coreect_when_fetch(){
+    @Before
+    public void should_fetch_the_correct_car_if_ticket_correct_when_fetch(){
 
         Car mycar = new Car();
         Ticket ticket = park.parkCar(mycar);

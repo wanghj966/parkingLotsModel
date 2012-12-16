@@ -1,9 +1,8 @@
 package edu.buaa.park;
 
-import java.util.Collection;
 import java.util.List;
 
-public class ParkingBoy {
+public class ParkingBoy{
     protected List<ParkPlace> parkPlaces;
     private final ParkingLotChooser parkingLotChooser;
 
@@ -23,7 +22,7 @@ public class ParkingBoy {
         return availableNum;
     }
     public Car fetch(Ticket ticket) {
-        Car fetchedCar=null;
+        Car fetchedCar;
         for(ParkPlace parkPlace:parkPlaces){
             fetchedCar=parkPlace.fecthCar(ticket);
             if(fetchedCar!=null){return fetchedCar;}
