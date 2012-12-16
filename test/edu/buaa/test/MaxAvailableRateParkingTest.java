@@ -1,6 +1,7 @@
 package edu.buaa.test;
 
 import edu.buaa.park.*;
+import edu.buaa.park.original.GeneralParkingBoy;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -4,25 +4,23 @@ import java.util.Collection;
 import java.util.List;
 
 public class ParkingBoy {
-    private List<ParkPlace> parkPlaces;
-    public ParkingBoy(List<ParkPlace> parkPlaces) {
+    protected List<ParkPlace> parkPlaces;
+    private final ParkingLotChooser parkingLotChooser;
+
+    public ParkingBoy(List<ParkPlace> parkPlaces, ParkingLotChooser parkingLotChooser) {
         this.parkPlaces=parkPlaces;
+        this.parkingLotChooser = parkingLotChooser;
     }
     public Ticket park(Car car) {
-      return getAvailablePark().parkCar(car);
+        return parkingLotChooser.getAvailablePark(parkPlaces).parkCar(car);
     }
-    public ParkPlace getAvailablePark(){
-        for(ParkPlace parkPlace:parkPlaces){
-            if(parkPlace.getAvailableNum()>0) return parkPlace;
-        }
-        throw new ParkFullException("所有的停车场都已满");
-    }
+
     public Integer getAvailableNum() {
         int availableNum=0;
         for(ParkPlace parkPlace:parkPlaces){
             availableNum+=parkPlace.getAvailableNum();
         }
-       return availableNum;
+        return availableNum;
     }
     public Car fetch(Ticket ticket) {
         Car fetchedCar=null;

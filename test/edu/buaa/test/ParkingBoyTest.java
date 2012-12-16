@@ -1,10 +1,7 @@
 package edu.buaa.test;
 
 import com.sun.org.apache.bcel.internal.generic.NEW;
-import edu.buaa.park.Car;
-import edu.buaa.park.ParkPlace;
-import edu.buaa.park.ParkingBoy;
-import edu.buaa.park.Ticket;
+import edu.buaa.park.*;
 import junit.framework.Assert;
 import org.junit.Test;
 
@@ -26,7 +23,7 @@ public class ParkingBoyTest {
         ParkPlace parkPlace=new ParkPlace(maxParkingNum);
         ArrayList<ParkPlace> parkPlaces=new ArrayList<ParkPlace>();
         parkPlaces.add(parkPlace) ;
-        ParkingBoy parkingBoy= new ParkingBoy(parkPlaces);
+        ParkingBoy parkingBoy= new ParkingBoy(parkPlaces,new FirstAvailableParkingLotChooser());
         Ticket ticket=parkingBoy.park(car);
         Assert.assertEquals(new Integer(maxParkingNum-1),parkingBoy.getAvailableNum());
     }
@@ -40,7 +37,7 @@ public class ParkingBoyTest {
         ParkPlace parkPlace=new ParkPlace(maxParkingNum);
         ArrayList<ParkPlace> parkPlaces=new ArrayList<ParkPlace>();
         parkPlaces.add(parkPlace) ;
-        ParkingBoy parkingBoy= new ParkingBoy(parkPlaces);
+        ParkingBoy parkingBoy= new ParkingBoy(parkPlaces,new FirstAvailableParkingLotChooser());
         Ticket ticket=parkingBoy.park(car);
         Assert.assertSame(car,parkingBoy.fetch(ticket));
     }

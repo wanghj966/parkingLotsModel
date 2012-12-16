@@ -28,7 +28,7 @@ public class ParkingBoyTest_WhenHavingSeveralParkplace {
               parkPlaces.add(new ParkPlace(parknum));
             totalAmount+=parknum;
         }
-        parkingBoy=new SmartParkingBoy(parkPlaces);
+        parkingBoy=new ParkingBoy(parkPlaces,new MaxAvailableParkingLotChooser());
         this.parkPlaces=parkPlaces;
     }
 

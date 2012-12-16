@@ -1,4 +1,6 @@
-package edu.buaa.park;
+package edu.buaa.park.original;
+
+import edu.buaa.park.ParkPlace;
 
 import java.util.Collection;
 import java.util.List;
