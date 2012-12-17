@@ -1,4 +1,4 @@
-1、parkingPlace任务分解
+1、parkingPlace任务分解(ParkPlaceTest)
 given                                                    when                        then
 停车场初始大小                                           显示剩余车位                得到与已知相符的车位数
 一个停车场,有空车位                                      停车                        成功,空车位-1
@@ -7,33 +7,32 @@ given                                                    when                   
 一个停车场,一辆车A                                       取车                        取到车A,空车位+1
 有效的停车凭证                                           取车                        取到原来的车
 --------------------------
-2、ParkingBoy(管理一个停车场)任务分解
-（类似parkingPlace任务分解）
-3、ParkingBoy(管理多个停车场)任务分解
+2、ParkingBoy(管理多个停车场)任务分解(ParkingBoyTest)
 given                                                    when                        then
 两个停车场都空                                           停车                        停车成功，两个停车场总停车位减少1
 两个停车场都空                                           取车                        取车失败，抛出未取到车异常
 两个停车场不全为空，停了一辆车                           取车                        取到停的那辆车
 两个停车场都满                                           停车                        停车失败，抛出停车场已满的异常
 --------------------------
-4、smartParkingBoy任务分解
+3、smartParkingBoy任务分解（MaxAvailableParkingTest）
 given                                                    when                        then
 两个停车场，剩余车位数不同                               停车                        停在剩余车位数多的停车场
 两个停车场，剩余车位数相同                               停车                        停在第一个停车场
 --------------------------
-5、superParkingBoy任务分解
+4、superParkingBoy任务分解（MaxAvailableRateParkingTest）
 given                                                    when                        then
 两个停车场，剩余车位占总车位数不同                       停车                        停在剩余车位数比例大的停车场
 两个停车场，剩余车位数比例相同                           停车                        停在第一个停车场
 两个停车场，一个剩余车位数多，另一个剩余车位比例大       停车                        停在剩余车位数比例大的停车场
 ---------------------------
-6、ParkingManager任务分解
+5、ParkingManager任务分解
 given                                                    when                        then
+自己管理两个停车场,三个parkingBoy(默认)未全满             停车                         停车成功，总车位数减1
+自己管理两个停车场,三个parkingBoy(默认)未全满             停车取车                     取到刚停下的车
+所有停车场都满了均满                                      停车                         停车场已满异常
+停车场正常停车                                            取车                         取到自己的车
+所有停车场为空                                            取车                         找不到车异常
 停车场和parkingboy都为空                                  停车                         停车场已满的异常
 只给了停车场，并未给parkingBoy                            停车                         停在自己的停车场中
-有自己的停车场，也给了parkingBoy，未全满                  停车                         停车成功，总车位数减1
-自管停车场和parkingBoy停车场均满                          停车                         停车场已满异常
-停车场正常停车                                            取车                         取到自己的车
-停车场为空                                                取车                         找不到车异常
 ---------------------------
-
+6、
