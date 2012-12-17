@@ -15,13 +15,20 @@ public class ParkingManager{
     public Ticket park(Car car) {
         return parkingBoyChooser.getAvailableParkingBoy(managedParkingboys).park(car);
     }
-    public Integer getAvailableNum() {
-        return managedParkingboys.get(0).getAvailableNum();
+    public int getAvailableNum() {
+        int availableNum=0;
+        for(ParkingBoy parkingBoy:managedParkingboys){
+            availableNum+=parkingBoy.getAvailableNum();
+        }
+        return availableNum;
     }
     public Car fetch(Ticket ticket) {
-        Car fetchedCar;
+        Car fetchedCar=null;
         for(ParkingBoy parkingBoy:managedParkingboys){
-            fetchedCar=parkingBoy.fetch(ticket);
+            try{fetchedCar=parkingBoy.fetch(ticket);}
+            catch(NoCarException e){
+                fetchedCar=null;
+            }
             if(fetchedCar!=null){return fetchedCar;}
         }
         throw new NoCarException("没有此车");

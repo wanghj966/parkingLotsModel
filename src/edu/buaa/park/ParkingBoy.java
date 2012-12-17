@@ -14,7 +14,7 @@ public class ParkingBoy{
         return parkingLotChooser.getAvailablePark(parkPlaces).parkCar(car);
     }
 
-    public Integer getAvailableNum() {
+    public int getAvailableNum() {
         int availableNum=0;
         for(ParkPlace parkPlace:parkPlaces){
             availableNum+=parkPlace.getAvailableNum();
@@ -22,7 +22,7 @@ public class ParkingBoy{
         return availableNum;
     }
     public Car fetch(Ticket ticket) {
-        Car fetchedCar;
+        Car fetchedCar=null;
         for(ParkPlace parkPlace:parkPlaces){
             fetchedCar=parkPlace.fecthCar(ticket);
             if(fetchedCar!=null){return fetchedCar;}
