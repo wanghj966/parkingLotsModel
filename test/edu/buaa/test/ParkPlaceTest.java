@@ -31,7 +31,7 @@ public class ParkPlaceTest {
 
      @Test
     public void should_carplaceNum_Minus_1_if_have_empty_Carplace_when_park(){
-             park.parkCar(new Car());
+             park.park(new Car());
              Assert.assertEquals(49,park.getAvailableNum());
     }
     /**
@@ -41,8 +41,10 @@ public class ParkPlaceTest {
      */
     @Test(expected =ParkFullException.class)
     public void should_throw_ParkFullException_if_park_full_when_park(){
-        for(int i=0;i<=50;i++)
-        park.parkCar(new Car());
+        int parkCapacity=park.getAvailableNum();
+        for(int i=0;i<parkCapacity;i++)
+        park.park(new Car());
+        park.park(new Car());
     }
 
     /*
@@ -51,7 +53,7 @@ public class ParkPlaceTest {
     */
     @Test
     public void should_get_ticket_if_park_success_when_park(){
-        Ticket ticket=park.parkCar(new Car());
+        Ticket ticket=park.park(new Car());
         Assert.assertNotNull(ticket);
     }
 
@@ -63,9 +65,9 @@ public class ParkPlaceTest {
      */
     @Test
     public void should_fetchSuccess_and_carplaceNum_add_1_if_have_fetched_car_when_fetch(){
-        park.parkCar(new Car());
-        park.parkCar(new Car());
-        Ticket ticket =park.parkCar(new Car());
+        park.park(new Car());
+        park.park(new Car());
+        Ticket ticket =park.park(new Car());
 
         park.fecthCar(ticket);
          Assert.assertEquals(park.getAvailableNum(), 48);
@@ -75,11 +77,11 @@ public class ParkPlaceTest {
     停车
     取到原来的车
     */
-    @Before
+    @Test
     public void should_fetch_the_correct_car_if_ticket_correct_when_fetch(){
 
         Car mycar = new Car();
-        Ticket ticket = park.parkCar(mycar);
+        Ticket ticket = park.park(mycar);
         Car fetchedCar=park.fecthCar(ticket);
         Assert.assertSame(mycar,fetchedCar);
     }

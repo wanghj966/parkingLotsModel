@@ -53,4 +53,31 @@ public class ParkingManagerTest {
     public void should_throwNoCarException_when_fetchCar_if_AllParkPlacesEmpty(){   /*parkingManager.getAvailableNum()不能作为i的上限，它是变化的*/
         parkingManager.fetch(new Ticket());
     }
+    /*停车场和parkingboy都为空                                  停车                         停车场已满的异常*/   /**改变默认条件*/
+    @Test(expected = edu.buaa.park.ParkFullException.class)
+    public void should_throwParkFullException_when_parkCar_if_no_Parkplace_and_no_parkingBoy(){
+        parkingManager=new ParkingManager(new ArrayList<ParkPlace>(),new MaxAvailableRateParkingLotChooser(),new ArrayList<ParkingBoy>(),new  MaxAvailablePlaceParkingBoyChooser());
+        parkingManager.park(new Car());
+    }
+    /*只给了停车场，并未给parkingBoy                            停车                         停在自己的停车场中*/
+    @Test
+    public void should_parkSucess_when_parkCar_if_have_Parkplace_but_no_parkingBoy(){
+        parkingManager=new ParkingManager(Arrays.asList(new ParkPlace(30),new ParkPlace(40)),new MaxAvailableRateParkingLotChooser(),new ArrayList<ParkingBoy>(),new  MaxAvailablePlaceParkingBoyChooser());
+        int prePark=parkingManager.getAvailableNum();
+        parkingManager.park(new Car());
+        Assert.assertEquals(prePark-1,parkingManager.getAvailableNum());
+    }
+    /*只给了parkingBoy，并未给停车场                            停车                         停在parkingboy的停车场中*/
+    @Test
+    public void should_parkSucess_when_parkCar_if_have_parkingBoy_but_no_Parkplace(){
+        ParkingBoy stupidParkingBoy=new ParkingBoy( Arrays.asList(new ParkPlace(10),new ParkPlace(20)),new FirstAvailableParkingLotChooser()) ;
+        ParkingBoy smartParkingBoy=new ParkingBoy( Arrays.asList(new ParkPlace(20),new ParkPlace(40)),new MaxAvailableParkingLotChooser()) ;
+        ParkingBoy superParkingBoy=new ParkingBoy( Arrays.asList(new ParkPlace(30),new ParkPlace(50)),new MaxAvailableRateParkingLotChooser()) ;
+        List<ParkingBoy> parkingBoys=Arrays.asList(stupidParkingBoy,smartParkingBoy,superParkingBoy);
+        parkingManager=new ParkingManager(new ArrayList<ParkPlace>(),new MaxAvailableRateParkingLotChooser(),parkingBoys, new MaxAvailablePlaceParkingBoyChooser());
+        int prePark=parkingManager.getAvailableNum();
+        parkingManager.park(new Car());
+        Assert.assertEquals(prePark-1,parkingManager.getAvailableNum());
+    }
+
 }

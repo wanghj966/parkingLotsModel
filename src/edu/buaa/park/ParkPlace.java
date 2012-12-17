@@ -9,8 +9,8 @@ public class ParkPlace {
         this.capacity=capacity;
         this.availableNum=capacity;
     }
-    public Ticket  parkCar(Car car){
-        if(capacity<=0) throw new ParkFullException("车库满了");
+    public Ticket  park(Car car){
+        if(availableNum<=0) throw new ParkFullException("车库满了");
         Ticket ticket=new Ticket();
         placeCarMaps.put(ticket,car);
         availableNum--;
@@ -19,6 +19,11 @@ public class ParkPlace {
     public int getAvailableNum() {
         return availableNum;
     }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
     public double getAvailableRate(){
         return (double)availableNum/(double)capacity;
     }

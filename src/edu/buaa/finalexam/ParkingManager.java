@@ -15,12 +15,24 @@ public class ParkingManager{
     public Ticket park(Car car) {
         return parkingBoyChooser.getAvailableParkingBoy(managedParkingboys).park(car);
     }
+
+    public List<ParkingBoy> getManagedParkingboys() {
+        return managedParkingboys;
+    }
+
     public int getAvailableNum() {
         int availableNum=0;
         for(ParkingBoy parkingBoy:managedParkingboys){
             availableNum+=parkingBoy.getAvailableNum();
         }
         return availableNum;
+    }
+    public int getCapacity(){
+        int totalCapacity=0;
+        for(ParkingBoy parkingBoy:managedParkingboys){
+            totalCapacity+=parkingBoy.getCapacity();
+        }
+        return totalCapacity;
     }
     public Car fetch(Ticket ticket) {
         Car fetchedCar=null;

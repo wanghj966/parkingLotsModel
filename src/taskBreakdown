@@ -28,11 +28,18 @@ given                                                    when                   
 5、ParkingManager任务分解
 given                                                    when                        then
 自己管理两个停车场,三个parkingBoy(默认)未全满             停车                         停车成功，总车位数减1
-自己管理两个停车场,三个parkingBoy(默认)未全满             停车取车                     取到刚停下的车
 所有停车场都满了均满                                      停车                         停车场已满异常
-停车场正常停车                                            取车                         取到自己的车
+自己管理两个停车场,三个parkingBoy(默认)未全满,正常停车    取车                         取到刚停下的车
 所有停车场为空                                            取车                         找不到车异常
 停车场和parkingboy都为空                                  停车                         停车场已满的异常
-只给了停车场，并未给parkingBoy                            停车                         停在自己的停车场中
+只给了停车场，并未给parkingBoy                            停车                         停在自己的停车场中停车成功
+只给了parkingBoy，并未给停车场                            停车                         停在parkingboy的停车场中
 ---------------------------
-6、
+6、ParkingDirector 打印类任务分解（全是静态方法）---可用在上面类的单元测试中
+given                                                         when                        then
+未停车的parkplace                                             打印                        得到想要的串
+未停车的ParkingBoy                                            打印                        得到想要的串
+未停车的ParkingManager                                        打印                        得到想要的串
+已停车但未满的parkplace                                       打印                        得到想要的串
+已停车但未满的ParkingBoy                                      打印                        得到想要的串
+已停车但未满的ParkingManager                                  打印                        得到想要的串

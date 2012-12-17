@@ -10,8 +10,13 @@ public class ParkingBoy{
         this.parkPlaces=parkPlaces;
         this.parkingLotChooser = parkingLotChooser;
     }
+
+    public List<ParkPlace> getParkPlaces() {
+        return parkPlaces;
+    }
+
     public Ticket park(Car car) {
-        return parkingLotChooser.getAvailablePark(parkPlaces).parkCar(car);
+        return parkingLotChooser.getAvailablePark(parkPlaces).park(car);
     }
 
     public int getAvailableNum() {
@@ -20,6 +25,13 @@ public class ParkingBoy{
             availableNum+=parkPlace.getAvailableNum();
         }
         return availableNum;
+    }
+    public int getCapacity(){
+        int totalCapacity=0;
+        for(ParkPlace parkPlace:parkPlaces){
+            totalCapacity+=parkPlace.getCapacity();
+        }
+        return totalCapacity;
     }
     public Car fetch(Ticket ticket) {
         Car fetchedCar=null;
