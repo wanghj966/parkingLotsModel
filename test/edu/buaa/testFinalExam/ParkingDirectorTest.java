@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class ParkingDirectorTest {
     private ParkPlace parkPlace;
@@ -26,33 +27,39 @@ public class ParkingDirectorTest {
     }
     @Test
     public void should_print_the_correct_String_when_print_parkPlace_if_never_parkCar(){
+          System.out.println("未停车的ParkPlace展示....");
           System.out.println(ParkingDirector.getPrintString(parkPlace));
     }
     @Test
     public void should_print_the_correct_String_when_print_parkingBoy_if_never_parkCar(){
+         System.out.println("未停车的ParkingBoy展示....");
          System.out.println(ParkingDirector.getPrintString(parkingBoy));
     }
     @Test
     public void should_print_the_correct_String_when_print_parkingManager_if_never_parkCar(){
+           System.out.println("未停车的ParkingManager展示....");
            System.out.println(ParkingDirector.getPrintString(parkingManager));
     }
     @Test
     public void should_print_the_correct_String_when_print_parkPlace_if_have_parkCar_but_NotFull(){
-        for(int i=0;i<parkPlace.getCapacity()/2;i++){
+        System.out.println("已停车的ParkPlace展示....");
+        for(int i=0;i<new Random().nextInt(parkPlace.getCapacity());i++){
             parkPlace.park(new Car());
         }
         System.out.println(ParkingDirector.getPrintString(parkPlace));
     }
     @Test
     public void should_print_the_correct_String_when_print_parkingBoy_if_have_parkCar_but_NotFull(){
-        for(int i=0;i<parkingBoy.getCapacity()/2;i++){
+        System.out.println("已停车的ParkingBoy展示....");
+        for(int i=0;i<new Random().nextInt(parkingBoy.getCapacity());i++){
             parkingBoy.park(new Car());
         }
         System.out.println(ParkingDirector.getPrintString(parkingBoy));
     }
     @Test
     public void should_print_the_correct_String_when_print_parkingManager_if_have_parkCar_but_NotFull(){
-        for(int i=0;i<parkingManager.getCapacity()/2;i++){
+        System.out.println("已停车的ParkingManager展示....");
+        for(int i=0;i<new Random().nextInt(parkingManager.getCapacity());i++){
             parkingManager.park(new Car());
         }
         System.out.println(ParkingDirector.getPrintString(parkingManager));

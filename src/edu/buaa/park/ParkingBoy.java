@@ -36,7 +36,7 @@ public class ParkingBoy{
     public Car fetch(Ticket ticket) {
         Car fetchedCar=null;
         for(ParkPlace parkPlace:parkPlaces){
-            fetchedCar=parkPlace.fecthCar(ticket);
+            fetchedCar=parkPlace.fetch(ticket);
             if(fetchedCar!=null){return fetchedCar;}
         }
         throw new NoCarException("没有此车");

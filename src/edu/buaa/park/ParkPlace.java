@@ -27,7 +27,7 @@ public class ParkPlace {
     public double getAvailableRate(){
         return (double)availableNum/(double)capacity;
     }
-    public Car fecthCar(Ticket ticket) {
+    public Car fetch(Ticket ticket) {
         Car car=placeCarMaps.get(ticket);
         if(car!=null){
         placeCarMaps.remove(ticket);

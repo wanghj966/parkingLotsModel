@@ -8,24 +8,13 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class MaxAvailableParkingTest {
-    private Integer totalAmount;
     private ParkingBoy parkingBoy;
-    private List<ParkPlace> parkPlaces;
     @Before
     public void init(){
-        List<ParkPlace> parkPlaces=new ArrayList<ParkPlace>();
-        Integer[] parkPlaceNums= new Integer[]{10, 20};
-        totalAmount=0;
-        for(Integer parknum:parkPlaceNums){
-            parkPlaces.add(new ParkPlace(parknum));
-            totalAmount+=parknum;
-        }
-        parkingBoy=new ParkingBoy(parkPlaces,new MaxAvailableParkingLotChooser());
-        this.parkPlaces=parkPlaces;
+        parkingBoy=new ParkingBoy(Arrays.asList(new ParkPlace(10),new ParkPlace(20)),new MaxAvailableParkingLotChooser());
     }
     /*smartingboy测试
 *    停车停在空车位多的那个停车场
@@ -33,7 +22,7 @@ public class MaxAvailableParkingTest {
     @Test
     public  void should_park_in_the_more_empty_parkplace(){
         parkingBoy.park(new Car());
-        Assert.assertEquals(19, parkPlaces.get(1).getAvailableNum());
+        Assert.assertEquals(19, parkingBoy.getParkPlaces().get(1).getAvailableNum());
     }
     /*smartingboy测试
     两个车库空间相同时停在第一个
@@ -43,6 +32,6 @@ public class MaxAvailableParkingTest {
         for(int i=0;i<10;i++){
             parkingBoy.park(new Car());}
         parkingBoy.park(new Car());
-        Assert.assertEquals(9, parkPlaces.get(0).getAvailableNum());
+        Assert.assertEquals(9, parkingBoy.getParkPlaces().get(0).getAvailableNum());
     }
 }

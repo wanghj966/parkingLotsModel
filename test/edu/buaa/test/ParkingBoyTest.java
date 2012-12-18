@@ -5,67 +5,48 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
-/**
- * Created with IntelliJ IDEA.
- * User: software
- * Date: 12-11-25
- * Time: 下午3:45
- * To change this template use File | Settings | File Templates.
- */
+
 public class ParkingBoyTest {
-    private int totalAmount;
     private ParkingBoy parkingBoy;
-    private  List<ParkPlace> parkPlaces;
+    private ParkingBoy singleParkPlaceParkingBoy;
     @Before
     public void init(){
-        List<ParkPlace> parkPlaces=new ArrayList<ParkPlace>();
-        Integer[] parkPlaceNums= new Integer[]{10, 20};
-        totalAmount=0;
-        for(Integer parknum:parkPlaceNums){
-              parkPlaces.add(new ParkPlace(parknum));
-            totalAmount+=parknum;
-        }
-        parkingBoy=new ParkingBoy(parkPlaces,new FirstAvailableParkingLotChooser());
-        this.parkPlaces=parkPlaces;
+        singleParkPlaceParkingBoy=new ParkingBoy(Arrays.asList(new ParkPlace(10)),new FirstAvailableParkingLotChooser());
+        parkingBoy=new ParkingBoy(Arrays.asList(new ParkPlace(10), new ParkPlace(20)),new FirstAvailableParkingLotChooser());
     }
+    /*管理一个停车场空                                           停车                        停车成功，两个停车场总停车位减少1*/
+    @Test
+    public void parkBoy_Should_parkSuccess_when_ParkCar_if_parkingBoy_have_oneParkPlace(){
+        singleParkPlaceParkingBoy.park(new Car());
+        Assert.assertEquals(singleParkPlaceParkingBoy.getCapacity()-1,singleParkPlaceParkingBoy.getAvailableNum());
+    }
+    /*两个停车场全为空，成功停车                               取车                        取到停的那辆车
+    * */
+    @Test
+    public void parkBoy_Should_fetchSuccess_when_fetchCar_if_parkingBoy_have_oneParkPlace(){
+        Car car=new Car();
+        Ticket ticket=singleParkPlaceParkingBoy.park(car);
+        Assert.assertSame(car,singleParkPlaceParkingBoy.fetch(ticket));
+    }
+    /*两个停车场都空                                           停车                        停车成功，两个停车场总停车位减少1*/
     @Test
     public void parkBoy_ShouldParkCar(){
-        Car car=new Car();
-        int maxParkingNum=20;
-        ParkPlace parkPlace=new ParkPlace(maxParkingNum);
-        ArrayList<ParkPlace> parkPlaces=new ArrayList<ParkPlace>();
-        parkPlaces.add(parkPlace) ;
-        ParkingBoy parkingBoy= new ParkingBoy(parkPlaces,new FirstAvailableParkingLotChooser());
-        Ticket ticket=parkingBoy.park(car);
-        Assert.assertEquals(maxParkingNum-1,parkingBoy.getAvailableNum());
+        parkingBoy.park(new Car());
+        Assert.assertEquals(parkingBoy.getCapacity()-1,parkingBoy.getAvailableNum());
     }
-    /*取车---
-
+    /*两个停车场不全为空，成功停车                             取车                        取到停的那辆车
     * */
     @Test
     public void parkBoy_ShouldfetchCar(){
         Car car=new Car();
-        int maxParkingNum=20;
-        ParkPlace parkPlace=new ParkPlace(maxParkingNum);
-        ArrayList<ParkPlace> parkPlaces=new ArrayList<ParkPlace>();
-        parkPlaces.add(parkPlace) ;
-        ParkingBoy parkingBoy= new ParkingBoy(parkPlaces,new FirstAvailableParkingLotChooser());
         Ticket ticket=parkingBoy.park(car);
         Assert.assertSame(car,parkingBoy.fetch(ticket));
     }
+
     /*
-    * 都空       停车
-    * */
-    @Test
-    public void should_park_Sucess_when_park_is_empty(){
-        parkingBoy.park(new Car());
-        Assert.assertEquals(totalAmount-1,parkingBoy.getAvailableNum());
-    }
-    /*
-   * 都空              取车
+   * 两个停车场都空                                           取车                        取车失败，抛出未取到车异常
    * */
     @Test(expected = edu.buaa.park.NoCarException.class)
     public void should_fetch_Sucess_when_park_is_empty(){
@@ -73,25 +54,24 @@ public class ParkingBoyTest {
     }
 
     /*
-   * 不全为空 ,取车
+   * 两个停车场不空不满，成功停车                             取车                        取到停的那辆车
    * */
     @Test
     public void should_fetch_Sucess_when_park_is_notempty(){
-        for(int i=0;i<totalAmount/2;i++){
-        parkingBoy.park(new Car());}
+        for(int i=0;i<parkingBoy.getCapacity()/2;i++)    parkingBoy.park(new Car());
         Car car=new Car();
         Ticket ticket=parkingBoy.park(car);
         Assert.assertSame(car,parkingBoy.fetch(ticket));
     }
 
     /*
-   * 全满 ,停车
+   * 两个停车场都满                                           停车                        停车失败，抛出停车场已满的异常
    * */
     @Test(expected = edu.buaa.park.ParkFullException.class)
     public void should_throwParkFullException_if_park_when_park_is_full(){
-        for(int i=0;i<totalAmount;i++){
+        for(int i=0;i<parkingBoy.getCapacity();i++){
             parkingBoy.park(new Car());}
-        parkingBoy.park(new Car());
+         parkingBoy.park(new Car());
     }
 
 

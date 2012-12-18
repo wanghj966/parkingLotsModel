@@ -8,6 +8,8 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Random;
+
 
 public class ParkPlaceTest {
     private ParkPlace park;
@@ -32,7 +34,7 @@ public class ParkPlaceTest {
      @Test
     public void should_carplaceNum_Minus_1_if_have_empty_Carplace_when_park(){
              park.park(new Car());
-             Assert.assertEquals(49,park.getAvailableNum());
+             Assert.assertEquals(park.getCapacity()-1,park.getAvailableNum());
     }
     /**
      * 一个停车场,没有空车位
@@ -41,8 +43,7 @@ public class ParkPlaceTest {
      */
     @Test(expected =ParkFullException.class)
     public void should_throw_ParkFullException_if_park_full_when_park(){
-        int parkCapacity=park.getAvailableNum();
-        for(int i=0;i<parkCapacity;i++)
+        for(int i=0;i<park.getCapacity();i++)
         park.park(new Car());
         park.park(new Car());
     }
@@ -65,12 +66,12 @@ public class ParkPlaceTest {
      */
     @Test
     public void should_fetchSuccess_and_carplaceNum_add_1_if_have_fetched_car_when_fetch(){
+        for(int i=0;i<new Random().nextInt(park.getCapacity());i++)
         park.park(new Car());
-        park.park(new Car());
-        Ticket ticket =park.park(new Car());
-
-        park.fecthCar(ticket);
-         Assert.assertEquals(park.getAvailableNum(), 48);
+        int preParkAvailableNum=park.getAvailableNum();
+         Ticket ticket =park.park(new Car());
+         park.fetch(ticket);
+         Assert.assertEquals(preParkAvailableNum,park.getAvailableNum());
     }
 
     /*有效的停车凭证
@@ -79,10 +80,9 @@ public class ParkPlaceTest {
     */
     @Test
     public void should_fetch_the_correct_car_if_ticket_correct_when_fetch(){
-
         Car mycar = new Car();
         Ticket ticket = park.park(mycar);
-        Car fetchedCar=park.fecthCar(ticket);
+        Car fetchedCar=park.fetch(ticket);
         Assert.assertSame(mycar,fetchedCar);
     }
 
