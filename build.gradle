@@ -1,27 +1,35 @@
 apply plugin: 'java'
-dependencies { testCompile 'junit:junit:4.10'}
+apply plugin: 'idea'
+repositories {
+    mavenCentral()
+}
+dependencies { testCompile group: 'junit', name: 'junit', version: '4.+'}
 sourceSets {
     main{
         java{
             srcDir 'src'
         }
-        resources{
-             srcDir 'src'
-        }
     }
     test{
-
+        java{
+            srcDir 'test'
+        }
     }
 }
-compileJava{
-
+tasks.withType(Compile) {
+    options.encoding = "UTF-8"
 }
-compileTestJava{
 
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'parkingLotsModel'
+    }
 }
-jar{
 
-}
-test{
-
+uploadArchives {
+    repositories {
+        flatDir {
+            dirs 'repos'
+        }
+    }
 }

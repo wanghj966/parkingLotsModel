@@ -26,22 +26,22 @@ public class ParkingDirectorTest {
         parkingManager=new ParkingManager(Arrays.asList(new ParkPlace(30),new ParkPlace(40)),new MaxAvailableRateParkingLotChooser(),parkingBoys, new MaxAvailablePlaceParkingBoyChooser());
     }
     @Test
-    public void should_print_the_correct_String_when_print_parkPlace_if_never_parkCar(){
+    public synchronized  void should_print_the_correct_String_when_print_parkPlace_if_never_parkCar(){
           System.out.println("未停车的ParkPlace展示....");
           System.out.println(ParkingDirector.getPrintString(parkPlace));
     }
     @Test
-    public void should_print_the_correct_String_when_print_parkingBoy_if_never_parkCar(){
+    public synchronized void should_print_the_correct_String_when_print_parkingBoy_if_never_parkCar(){
          System.out.println("未停车的ParkingBoy展示....");
          System.out.println(ParkingDirector.getPrintString(parkingBoy));
     }
     @Test
-    public void should_print_the_correct_String_when_print_parkingManager_if_never_parkCar(){
+    public synchronized void should_print_the_correct_String_when_print_parkingManager_if_never_parkCar(){
            System.out.println("未停车的ParkingManager展示....");
            System.out.println(ParkingDirector.getPrintString(parkingManager));
     }
     @Test
-    public void should_print_the_correct_String_when_print_parkPlace_if_have_parkCar_but_NotFull(){
+    public synchronized void should_print_the_correct_String_when_print_parkPlace_if_have_parkCar_but_NotFull(){
         System.out.println("已停车的ParkPlace展示....");
         for(int i=0;i<new Random().nextInt(parkPlace.getCapacity());i++){
             parkPlace.park(new Car());
@@ -49,7 +49,7 @@ public class ParkingDirectorTest {
         System.out.println(ParkingDirector.getPrintString(parkPlace));
     }
     @Test
-    public void should_print_the_correct_String_when_print_parkingBoy_if_have_parkCar_but_NotFull(){
+    public synchronized void should_print_the_correct_String_when_print_parkingBoy_if_have_parkCar_but_NotFull(){
         System.out.println("已停车的ParkingBoy展示....");
         for(int i=0;i<new Random().nextInt(parkingBoy.getCapacity());i++){
             parkingBoy.park(new Car());
@@ -57,7 +57,7 @@ public class ParkingDirectorTest {
         System.out.println(ParkingDirector.getPrintString(parkingBoy));
     }
     @Test
-    public void should_print_the_correct_String_when_print_parkingManager_if_have_parkCar_but_NotFull(){
+    public synchronized void should_print_the_correct_String_when_print_parkingManager_if_have_parkCar_but_NotFull(){
         System.out.println("已停车的ParkingManager展示....");
         for(int i=0;i<new Random().nextInt(parkingManager.getCapacity());i++){
             parkingManager.park(new Car());
