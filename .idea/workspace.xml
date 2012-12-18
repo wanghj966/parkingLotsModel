@@ -2,30 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4575ad5d-7bb0-4684-820a-c3226d6892de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/buaa/park/original/GeneralParkingBoy.java" afterPath="$PROJECT_DIR$/src/edu/buaa/park/original/GeneralParkingBoy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableParkingTest.java" afterPath="$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableParkingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableRateParkingTest.java" afterPath="$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableRateParkingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/buaa/park/ParkPlace.java" afterPath="$PROJECT_DIR$/src/edu/buaa/park/ParkPlace.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/edu/buaa/test/ParkPlaceTest.java" afterPath="$PROJECT_DIR$/test/edu/buaa/test/ParkPlaceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/buaa/park/ParkingBoy.java" afterPath="$PROJECT_DIR$/src/edu/buaa/park/ParkingBoy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/edu/buaa/test/ParkingBoyTest.java" afterPath="$PROJECT_DIR$/test/edu/buaa/test/ParkingBoyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/edu/buaa/testFinalExam/ParkingDirectorTest.java" afterPath="$PROJECT_DIR$/test/edu/buaa/testFinalExam/ParkingDirectorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parkingManagement.iml" afterPath="$PROJECT_DIR$/parkingManagement.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/taskBreakdown" afterPath="$PROJECT_DIR$/src/taskBreakdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="parkingManagement.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355816605111" ignored="false" />
+    <file path="/Dummy.txt" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355816714558" ignored="false" />
     <file path="/MaxAvailableParkingTest.java" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355813737084" ignored="false" />
     <file path="/MaxAvailableRateParkingTest.java" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355814020296" ignored="false" />
     <file path="/ParkingBoyTest.java" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355815127712" ignored="false" />
-    <file path="/taskBreakdown" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355815326525" ignored="false" />
+    <file path="/taskBreakdown" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355816931002" ignored="false" />
     <file path="/ParkPlaceTest.java" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355815996083" ignored="false" />
     <file path="/ParkPlace.java" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355815965504" ignored="false" />
     <file path="/GeneralParkingBoy.java" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355815979079" ignored="false" />
     <file path="/ParkingBoy.java" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355815984275" ignored="false" />
     <file path="/ParkingDirectorTest.java" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355816364536" ignored="false" />
+    <file path="/build.gradle" changelist="4575ad5d-7bb0-4684-820a-c3226d6892de" time="1355820437628" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,30 +79,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ParkingManagerTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/edu/buaa/testFinalExam/ParkingManagerTest.java">
+      <file leaf-file-name="ParkingDirectorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/edu/buaa/testFinalExam/ParkingDirectorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="26" selection-start="2447" selection-end="2451" vertical-scroll-proportion="0.0">
+            <state line="59" column="41" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParkingDirectorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/edu/buaa/testFinalExam/ParkingDirectorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="41" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParkingBoy.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ParkingBoy.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/buaa/park/ParkingBoy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="17" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.73049647">
+            <state line="44" column="17" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,7 +101,9 @@
         <entry file="file://$PROJECT_DIR$/src/edu/buaa/park/original/GeneralParkingBoy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="13" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,9 +112,7 @@
         <entry file="file://$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableRateParkingTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="14" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,7 +122,8 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="0" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1355816639080" expanded="true" signature="762:936" placeholder="{...}" />
+                <marker date="1355816639080" expanded="true" signature="1131:1296" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -148,7 +132,16 @@
       <file leaf-file-name="taskBreakdown" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/taskBreakdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="17" selection-start="3213" selection-end="3230" vertical-scroll-proportion="0.0">
+            <state line="13" column="44" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,9 +151,7 @@
         <entry file="file://$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableParkingTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,7 +160,9 @@
         <entry file="file://$PROJECT_DIR$/test/edu/buaa/test/ParkPlaceTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="79" column="14" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -198,17 +191,22 @@
       <MyDateState />
     </option>
   </component>
+  <component name="GradleLocalSettings">
+    <option name="expandStates">
+      <map>
+        <entry key="parkingManagement" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/buaa/park/ParkingBoyChooser.java" />
         <option value="$PROJECT_DIR$/src/edu/buaa/finalexam/ParkManagement.java" />
         <option value="$PROJECT_DIR$/src/edu/buaa/finalexam/ParkingBoyChooser.java" />
         <option value="$PROJECT_DIR$/test/edu/buaa/test/ParkTest.java" />
         <option value="$PROJECT_DIR$/test/edu/buaa/testFinalExam/ParkingManagerTest.java" />
         <option value="$PROJECT_DIR$/src/edu/buaa/finalexam/ParkingManager.java" />
         <option value="$PROJECT_DIR$/src/edu/buaa/finalexam/ParkingDirector.java" />
-        <option value="$PROJECT_DIR$/src/taskBreakdown" />
         <option value="$PROJECT_DIR$/src/edu/buaa/park/ParkPlace.java" />
         <option value="$PROJECT_DIR$/src/edu/buaa/park/original/GeneralParkingBoy.java" />
         <option value="$PROJECT_DIR$/src/edu/buaa/park/ParkingBoy.java" />
@@ -217,6 +215,8 @@
         <option value="$PROJECT_DIR$/test/edu/buaa/test/ParkingBoyTest.java" />
         <option value="$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableRateParkingTest.java" />
         <option value="$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableParkingTest.java" />
+        <option value="$PROJECT_DIR$/src/taskBreakdown" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -283,15 +283,9 @@
               <option name="myItemId" value="parkingManagement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="parkingManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parkManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -301,94 +295,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="parkManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="buaa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testFinalExam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parkingManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parkManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="buaa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parkingManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parkManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parkingManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parkManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="buaa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="park" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parkingManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parkManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="buaa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -398,11 +304,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="D:/Program Files/programing/gradle-1.3/lib/groovy-all-1.8.6.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -551,6 +458,15 @@
       <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="D:\workspace\parkManagement" />
+      <setting name="debug" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -702,7 +618,11 @@
       <created>1355632490971</created>
       <updated>1355632490971</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完善测试和代码实现,剩余gradle没写">
+      <created>1355816722776</created>
+      <updated>1355816722776</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -730,7 +650,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.67525035" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761088" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -794,7 +714,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="基本任务完成，前面做好的部分内容待重构(如可以测试用例中提取到初始化方法中的内容）" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善测试和代码实现,剩余gradle没写" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -813,6 +733,7 @@
     <MESSAGE value="添加ParkingMangagement实现" />
     <MESSAGE value="任务分解，测试完善" />
     <MESSAGE value="基本任务完成，前面做好的部分内容待重构(如可以测试用例中提取到初始化方法中的内容）" />
+    <MESSAGE value="完善测试和代码实现,剩余gradle没写" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -822,11 +743,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/buaa/finalexam/ParkingBoyChooser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/buaa/park/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="13" selection-start="192" selection-end="192" vertical-scroll-proportion="0.38426965">
@@ -875,30 +791,25 @@
     <entry file="file://$PROJECT_DIR$/test/edu/buaa/test/ParkPlaceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="14" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/taskBreakdown">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="17" selection-start="3213" selection-end="3230" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/edu/buaa/testFinalExam/ParkingDirectorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="41" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/buaa/park/original/GeneralParkingBoy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -906,7 +817,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1355816639080" expanded="true" signature="762:936" placeholder="{...}" />
+            <marker date="1355816639080" expanded="true" signature="1131:1296" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -914,24 +826,34 @@
     <entry file="file://$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableRateParkingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="14" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/edu/buaa/test/MaxAvailableParkingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/buaa/park/ParkingBoy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="17" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.73049647">
+        <state line="44" column="17" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/taskBreakdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="44" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -965,6 +887,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>groovy-all-1.8.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

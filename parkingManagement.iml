@@ -17,7 +17,8 @@
       </library>
     </orderEntry>
     <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
-    <orderEntry type="library" exported="" name="jdk1.7" level="project" />
+    <orderEntry type="library" name="groovy-all-1.8.6" level="application" />
+    <orderEntry type="library" name="groovy-all-1.8.6" level="application" />
   </component>
 </module>
 
