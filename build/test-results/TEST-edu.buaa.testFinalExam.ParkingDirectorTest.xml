@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="wanghj-PC" name="edu.buaa.testFinalExam.ParkingDirectorTest" tests="6" time="0.02" timestamp="2012-12-18T15:40:40">
+  <properties />
+  <testcase classname="edu.buaa.testFinalExam.ParkingDirectorTest" name="should_print_the_correct_String_when_print_parkingBoy_if_never_parkCar" time="0.0040" />
+  <testcase classname="edu.buaa.testFinalExam.ParkingDirectorTest" name="should_print_the_correct_String_when_print_parkPlace_if_have_parkCar_but_NotFull" time="0.0" />
+  <testcase classname="edu.buaa.testFinalExam.ParkingDirectorTest" name="should_print_the_correct_String_when_print_parkPlace_if_never_parkCar" time="0.0" />
+  <testcase classname="edu.buaa.testFinalExam.ParkingDirectorTest" name="should_print_the_correct_String_when_print_parkingManager_if_have_parkCar_but_NotFull" time="0.0040" />
+  <testcase classname="edu.buaa.testFinalExam.ParkingDirectorTest" name="should_print_the_correct_String_when_print_parkingBoy_if_have_parkCar_but_NotFull" time="0.0" />
+  <testcase classname="edu.buaa.testFinalExam.ParkingDirectorTest" name="should_print_the_correct_String_when_print_parkingManager_if_never_parkCar" time="0.0030" />
+  <system-out><![CDATA[未停车的ParkingBoy展示....
+停车场编号：1
+    车位数：20
+    空位数：20
+停车场编号：2
+    车位数：10
+    空位数：10
+Total车位数：30
+Total空位数：30
+
+已停车的ParkPlace展示....
+车位数：50
+空位数：44
+
+未停车的ParkPlace展示....
+车位数：50
+空位数：50
+
+已停车的ParkingManager展示....
+停车场编号：1
+    车位数：30
+    空位数：28
+停车场编号：2
+    车位数：40
+    空位数：37
+Total车位数：70
+Total空位数：65
+停车仔编号：1
+    停车场编号：1
+        车位数：10
+        空位数：10
+    停车场编号：2
+        车位数：20
+        空位数：20
+    Total车位数：30
+    Total空位数：30
+停车仔编号：2
+    停车场编号：1
+        车位数：20
+        空位数：20
+    停车场编号：2
+        车位数：40
+        空位数：40
+    Total车位数：60
+    Total空位数：60
+停车仔编号：3
+    停车场编号：1
+        车位数：30
+        空位数：24
+    停车场编号：2
+        车位数：50
+        空位数：41
+    Total车位数：80
+    Total空位数：65
+Total车位数：240
+Total空位数：220
+
+已停车的ParkingBoy展示....
+停车场编号：1
+    车位数：20
+    空位数：12
+停车场编号：2
+    车位数：10
+    空位数：10
+Total车位数：30
+Total空位数：22
+
+未停车的ParkingManager展示....
+停车场编号：1
+    车位数：30
+    空位数：30
+停车场编号：2
+    车位数：40
+    空位数：40
+Total车位数：70
+Total空位数：70
+停车仔编号：1
+    停车场编号：1
+        车位数：10
+        空位数：10
+    停车场编号：2
+        车位数：20
+        空位数：20
+    Total车位数：30
+    Total空位数：30
+停车仔编号：2
+    停车场编号：1
+        车位数：20
+        空位数：20
+    停车场编号：2
+        车位数：40
+        空位数：40
+    Total车位数：60
+    Total空位数：60
+停车仔编号：3
+    停车场编号：1
+        车位数：30
+        空位数：30
+    停车场编号：2
+        车位数：50
+        空位数：50
+    Total车位数：80
+    Total空位数：80
+Total车位数：240
+Total空位数：240
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
