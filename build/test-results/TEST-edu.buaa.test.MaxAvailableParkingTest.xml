@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" hostname="wanghj-PC" name="edu.buaa.test.MaxAvailableParkingTest" tests="2" time="0.073" timestamp="2012-12-18T15:40:40">
+<testsuite errors="0" failures="0" hostname="wanghj-PC" name="edu.buaa.test.MaxAvailableParkingTest" tests="2" time="0.016" timestamp="2012-12-19T03:33:47">
   <properties />
-  <testcase classname="edu.buaa.test.MaxAvailableParkingTest" name="should_park_in_the_first_parkplace_if_park_availableSize_same" time="0.0060" />
+  <testcase classname="edu.buaa.test.MaxAvailableParkingTest" name="should_park_in_the_first_parkplace_if_park_availableSize_same" time="0.014" />
   <testcase classname="edu.buaa.test.MaxAvailableParkingTest" name="should_park_in_the_more_empty_parkplace" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

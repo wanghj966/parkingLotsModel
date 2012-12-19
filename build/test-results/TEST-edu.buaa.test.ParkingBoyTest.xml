@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" hostname="wanghj-PC" name="edu.buaa.test.ParkingBoyTest" tests="7" time="0.0080" timestamp="2012-12-18T15:40:40">
+<testsuite errors="0" failures="0" hostname="wanghj-PC" name="edu.buaa.test.ParkingBoyTest" tests="7" time="0.0050" timestamp="2012-12-19T03:33:47">
   <properties />
   <testcase classname="edu.buaa.test.ParkingBoyTest" name="parkBoy_Should_fetchSuccess_when_fetchCar_if_parkingBoy_have_oneParkPlace" time="0.0" />
   <testcase classname="edu.buaa.test.ParkingBoyTest" name="should_fetch_Sucess_when_park_is_notempty" time="0.0" />
@@ -7,7 +7,7 @@
   <testcase classname="edu.buaa.test.ParkingBoyTest" name="parkBoy_ShouldfetchCar" time="0.0" />
   <testcase classname="edu.buaa.test.ParkingBoyTest" name="parkBoy_ShouldParkCar" time="0.0" />
   <testcase classname="edu.buaa.test.ParkingBoyTest" name="should_throwParkFullException_if_park_when_park_is_full" time="0.0" />
-  <testcase classname="edu.buaa.test.ParkingBoyTest" name="should_fetch_Sucess_when_park_is_empty" time="0.0010" />
+  <testcase classname="edu.buaa.test.ParkingBoyTest" name="should_fetch_Sucess_when_park_is_empty" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

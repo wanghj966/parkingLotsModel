@@ -1,6 +1,6 @@
 一、小组人员
 1、姓名：王洪军   学号：ZY1221210    专业：软工   电话：1510250986
-2、姓名：李叶子   学号：GS1221211    专业：软工-通信方向  电话：
+2、姓名：李叶子   学号：GS1221211    专业：软工-通信方向  电话：15611012802
 二、打印结果说明
 我们认为打印属于需求的一部分，而测试也是需求，故把打印的结果展示放在测试中。
 在gradle产生的结果build/reports/tests/edu.buaa.testFinalExam.ParkingDirectorTest.html
@@ -15,9 +15,10 @@
     ParkingDirector 打印类的实现
     2、主要测试类
     ParkPlace为ParkPlace类的单元测试
-    ParkingBoyTest为ParkingBoy类测试，以及FirstAvailableParkingLotChooser策略的测试
+    ParkingBoyTest为通用ParkingBoy类测试，可以传入任何选择停车场策略
+    [FirstAvailableParkingTest为FirstAvailableParkingLotChooser策略的单元测试
     MaxAvailableParkingTest为MaxAvailableParkingLotChooser策略的单元测试
-    MaxAvailableRateParkingTest为MaxAvailableRateParkingLotChooser策略的单元测试
+    MaxAvailableRateParkingTest为MaxAvailableRateParkingLotChooser策略的单元测试]
     ParkingManagerTest为ParkingManager实现
     ParkingDirector为打印类的打印结果
     任务分解见附件一
@@ -38,7 +39,7 @@ given                                                    when                   
 一个停车场,一辆车A                                       取车                        取到车A,空车位+1
 有效的停车凭证                                           取车                        取到原来的车
 --------------------------
-2、ParkingBoy(管理多个停车场)任务分解(ParkingBoyTest)
+2、ParkingBoy(管理多个停车场)任务分解(ParkingBoyTest)---可以传入任何策略
 given                                                    when                        then
 两个停车场都空                                           停车                        停车成功，两个停车场总停车位减少1
 两个停车场都空                                           取车                        取车失败，抛出未取到车异常
@@ -46,18 +47,22 @@ given                                                    when                   
 两个停车场不空不满，成功停车                             取车                        取到停的那辆车
 两个停车场都满                                           停车                        停车失败，抛出停车场已满的异常
 --------------------------
-3、smartParkingBoy任务分解（MaxAvailableParkingTest）
+3、StupidParkingBoy任务分解(FirstAvailableParkingTest)---FirstAvailableParkingLotChooser策略单元测试
+given                                                    when                        then
+两个停车场，第一个停车场未满                             停车                        停在第一个停车场，第一个停车场车位减1
+两空车场停超过第一个停车场车位数但小于总车位数的车       停车                        第一个停车场满
+4、smartParkingBoy任务分解（MaxAvailableParkingTest）
 given                                                    when                        then
 两个停车场，剩余车位数不同                               停车                        停在剩余车位数多的停车场
 两个停车场，剩余车位数相同                               停车                        停在第一个停车场
 --------------------------
-4、superParkingBoy任务分解（MaxAvailableRateParkingTest）
+5、superParkingBoy任务分解（MaxAvailableRateParkingTest）
 given                                                    when                        then
 两个停车场，剩余车位占总车位数不同                       停车                        停在剩余车位数比例大的停车场
 两个停车场，剩余车位数比例相同                           停车                        停在第一个停车场
 两个停车场，一个剩余车位数多，另一个剩余车位比例大       停车                        停在剩余车位数比例大的停车场
 ---------------------------
-5、ParkingManager任务分解
+6、ParkingManager任务分解
 given                                                    when                        then
 自己管理两个停车场,三个parkingBoy(默认)未全满             停车                         停车成功，总车位数减1
 所有停车场都满了均满                                      停车                         停车场已满异常
@@ -67,7 +72,7 @@ given                                                    when                   
 只给了停车场，并未给parkingBoy                            停车                         停在自己的停车场中停车成功
 只给了parkingBoy，并未给停车场                            停车                         停在parkingboy的停车场中
 ---------------------------
-6、ParkingDirector 打印类任务分解（全是静态方法）---可用在上面类的单元测试中
+7、ParkingDirector 打印类任务分解（全是静态方法）---可用在上面类的单元测试中
 given                                                         when                        then
 未停车的parkplace                                             打印                        得到想要的串
 未停车的ParkingBoy                                            打印                        得到想要的串

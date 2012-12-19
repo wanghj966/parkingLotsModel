@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" hostname="wanghj-PC" name="edu.buaa.testFinalExam.ParkingManagerTest" tests="7" time="0.014" timestamp="2012-12-18T15:40:40">
+<testsuite errors="0" failures="0" hostname="wanghj-PC" name="edu.buaa.testFinalExam.ParkingManagerTest" tests="7" time="0.0050" timestamp="2012-12-19T03:33:47">
   <properties />
-  <testcase classname="edu.buaa.testFinalExam.ParkingManagerTest" name="should_throwParkFullException_when_parkCar_if_no_Parkplace_and_no_parkingBoy" time="0.0" />
+  <testcase classname="edu.buaa.testFinalExam.ParkingManagerTest" name="should_throwParkFullException_when_parkCar_if_no_Parkplace_and_no_parkingBoy" time="0.0010" />
   <testcase classname="edu.buaa.testFinalExam.ParkingManagerTest" name="should_throwNoCarException_when_fetchCar_if_AllParkPlacesEmpty" time="0.0" />
   <testcase classname="edu.buaa.testFinalExam.ParkingManagerTest" name="should_parkSucess_when_parkCar_if_have_parkingBoy_but_no_Parkplace" time="0.0" />
-  <testcase classname="edu.buaa.testFinalExam.ParkingManagerTest" name="should_throwParkFullException_when_parkCar_if_AllParkPlacesFull" time="0.0050" />
+  <testcase classname="edu.buaa.testFinalExam.ParkingManagerTest" name="should_throwParkFullException_when_parkCar_if_AllParkPlacesFull" time="0.0010" />
   <testcase classname="edu.buaa.testFinalExam.ParkingManagerTest" name="should_fetchSuccess_when_fetchCar_if_parkSuccess" time="0.0" />
   <testcase classname="edu.buaa.testFinalExam.ParkingManagerTest" name="should_parkSucess_when_parkCar_if_have_Parkplace_but_no_parkingBoy" time="0.0" />
   <testcase classname="edu.buaa.testFinalExam.ParkingManagerTest" name="should_parkSuccess_and_TotalPlaceMinus1_when_parkCar_if_parkplaces_not_full" time="0.0" />
